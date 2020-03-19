@@ -19,15 +19,29 @@ int main()
 	freopen("input.txt","r",stdin);
 	freopen("output.txt","w",stdout);
 	#endif
+    
+    string s ; 
+    cin>>s;
+    int yes =0 ;
 
-	string s;
-	cin>>s;
+    for( ll i=0 ; i<s.size() ; ++i )
+    	{
+    		if( s.at(i)== '4' || s.at(i)== '7' )
+    		  {	
+    		  	if(i==s.size()-1)
+    		  	yes++;	
 
-	if(s.at(0)>=97)
-		s.at(0)-=32;
+    		  	continue;
+              }
+            else
+              {	
+    		    cout<<"NO\n";
+    		    break;
+    		  }  
+    	}
 
-	cout<<s<<"\n";
-
+    if(yes)
+    cout<<"YES\n";
 
 
     //TLE;    

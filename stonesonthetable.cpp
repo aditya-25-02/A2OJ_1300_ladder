@@ -19,16 +19,32 @@ int main()
 	freopen("input.txt","r",stdin);
 	freopen("output.txt","w",stdout);
 	#endif
+    
+    int n ;
+    cin>>n;
 
-	string s;
-	cin>>s;
+    string s ; 
+    cin>>s;
 
-	if(s.at(0)>=97)
-		s.at(0)-=32;
+    int req =0 ;
+    for (int i=0 ; i<n ; )
+    	{
+    		int count = 0 ;
+    		int temp = s.at(i);
 
-	cout<<s<<"\n";
-
-
+    		while( s.at(i)== temp )
+    			 {
+    			 	count++;
+    			 	i++;
+    			 	if(i==n)
+    			 	   break;
+    			 }
+    		if(count==1)
+    		continue;
+    		else
+    		req = req + count -1 ;	
+    	}
+        cout<<req<<"\n"; 
 
     //TLE;    
 	return 0;
