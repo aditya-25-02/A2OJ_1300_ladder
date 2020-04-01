@@ -24,33 +24,11 @@ int main() {
     FASTIO;
   	#ifndef ONLINE_JUDGE
   	freopen("input.txt","r",stdin);
-	freopen("output.txt","w",stdout);
-	freopen("error.txt","w",stderr);
-	#endif
+  	freopen("output.txt","w",stdout);
+ 	  freopen("error.txt","w",stderr);
+	  #endif
     
-    string s;
-    cin>>s;
-    ll n = s.size() , yes = 0 ;
-    rep(i,0,n) {
-        deb(i)
-        if(i==n-6) break;
-        if(s[i]==s[i+1]) {
-            ll temp  = i;
-            ll count = 0;
-            deb(temp)
-            while(s[temp]==s[temp+1]) {
-                count++;
-                temp++;
-                if(count==6)   break;
-                if(temp==n-1)  break;
-            }
-            i=temp;
-            if(count==6) yes++;
-        }
-        if(yes) break;
-    }
-    if(yes) cout<<"YES\n";
-    else    cout<<"NO\n";
-
+    cout<<"NO\n";
+    
     return 0 ;
 }
